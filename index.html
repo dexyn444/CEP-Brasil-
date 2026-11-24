@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#075985">
+
+    <meta name="description"
+          content="Encontre CEPs de todo o Brasil gratuitamente.">
+
+    <title>CEP Fácil Brasil</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <a class="logo" href="#">
+        <span class="logo-mark">⌖</span>
+        CEP Fácil <strong>Brasil</strong>
+    </a>
+
+    <span class="header-note">
+        Consulta gratuita de CEP
+    </span>
+
+</header>
+
+<main>
+
+    <section class="hero">
+
+        <span class="eyebrow">
+            ENDEREÇO CERTO, SEM COMPLICAÇÃO
+        </span>
+
+        <h1>
+            Encontre seu CEP<br>
+            <span>em poucos segundos.</span>
+        </h1>
+
+        <p class="intro">
+            Pesquise por rua, bairro, cidade
+            ou consulte diretamente pelo CEP.
+        </p>
+
+        <div class="search-card">
+
+            <div class="tabs">
+
+                <button
+                    type="button"
+                    class="tab active"
+                    data-mode="address">
+
+                    Buscar endereço
+
+                </button>
+
+                <button
+                    type="button"
+                    class="tab"
+                    data-mode="cep">
+
+                    Buscar por CEP
+
+                </button>
+
+            </div>
+
+            <!-- BUSCA POR ENDEREÇO -->
+
+            <form id="address-form">
+
+                <label for="bairro">
+                    Bairro (opcional)
+                </label>
+
+                <input
+                    id="bairro"
+                    type="text"
+                    placeholder="Ex.: Centro, Nosso Teto"
+                >
+
+                <label for="rua">
+                    Rua ou avenida (opcional)
+                </label>
+
+                <input
+                    id="rua"
+                    type="text"
+                    placeholder="Ex.: Rua XV de Novembro"
+                >
+
+                <div class="form-row">
+
+                    <div>
+
+                        <label for="cidade">
+                            Cidade
+                        </label>
+
+                        <input
+                            id="cidade"
+                            type="text"
+                            placeholder="Ex.: Santa Rosa de Viterbo"
+                            required
+                        >
+
+                    </div>
+
+                    <div>
+
+                        <label for="estado">
+                            Estado
+                        </label>
+
+                        <select id="estado" required>
+
+                            <option value="">UF</option>
+
+                            <option>AC</option>
+                            <option>AL</option>
+                            <option>AP</option>
+                            <option>AM</option>
+                            <option>BA</option>
+                            <option>CE</option>
+                            <option>DF</option>
+                            <option>ES</option>
+                            <option>GO</option>
+                            <option>MA</option>
+                            <option>MT</option>
+                            <option>MS</option>
+                            <option>MG</option>
+                            <option>PA</option>
+                            <option>PB</option>
+                            <option>PR</option>
+                            <option>PE</option>
+                            <option>PI</option>
+                            <option>RJ</option>
+                            <option>RN</option>
+                            <option>RS</option>
+                            <option>RO</option>
+                            <option>RR</option>
+                            <option>SC</option>
+                            <option>SP</option>
+                            <option>SE</option>
+                            <option>TO</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <p class="hint">
+                    Você pode pesquisar somente pelo bairro
+                    ou informar também a rua.
+                </p>
+
+                <button class="submit" type="submit">
+                    Buscar CEP →
+                </button>
+
+            </form>
+
+            <!-- BUSCA POR CEP -->
+
+            <form id="cep-form" class="hidden">
+
+                <label for="cep-input">
+                    Digite o CEP
+                </label>
+
+                <input
+                    id="cep-input"
+                    type="text"
+                    inputmode="numeric"
+                    maxlength="9"
+                    placeholder="00000-000"
+                    required
+                >
+
+                <button class="submit" type="submit">
+                    Consultar endereço →
+                </button>
+
+            </form>
+
+            <p class="privacy">
+                ✓ Gratuito · Sem cadastro · Fácil de usar
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- RESULTADOS -->
+
+    <section
+        id="results-section"
+        class="results-section hidden"
+        aria-live="polite">
+
+        <div class="results-heading">
+
+            <div>
+
+                <span class="eyebrow">
+                    RESULTADO DA CONSULTA
+                </span>
+
+                <h2 id="results-title">
+                    Endereços encontrados
+                </h2>
+
+            </div>
+
+            <span id="result-count" class="count"></span>
+
+        </div>
+
+        <div id="results" class="results"></div>
+
+    </section>
+
+    <!-- COMO FUNCIONA -->
+
+    <section class="how">
+
+        <div>
+
+            <span class="eyebrow">
+                SIMPLES ASSIM
+            </span>
+
+            <h2>
+                Do endereço ao CEP<br>
+                sem perder tempo.
+            </h2>
+
+        </div>
+
+        <div class="steps">
+
+            <article>
+
+                <span>01</span>
+
+                <div>
+
+                    <h3>Digite o endereço</h3>
+
+                    <p>
+                        Informe cidade, estado e,
+                        se souber, bairro ou rua.
+                    </p>
+
+                </div>
+
+            </article>
+
+            <article>
+
+                <span>02</span>
+
+                <div>
+
+                    <h3>Confira os resultados</h3>
+
+                    <p>
+                        Veja os CEPs retornados
+                        pela base consultada.
+                    </p>
+
+                </div>
+
+            </article>
+
+            <article>
+
+                <span>03</span>
+
+                <div>
+
+                    <h3>Copie e pronto</h3>
+
+                    <p>
+                        Copie o CEP para utilizar
+                        no seu cadastro ou entrega.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <a class="logo" href="#">
+        <span class="logo-mark">⌖</span>
+        CEP Fácil <strong>Brasil</strong>
+    </a>
+
+    <p>
+        Facilitando a vida dos brasileiros.
+    </p>
+
+    <small>
+        Dados consultados pelo ViaCEP.
+        Confirme informações importantes nos Correios.
+    </small>
+
+</footer>
+
+<div id="toast" class="toast" role="status"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
